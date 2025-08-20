@@ -2,7 +2,10 @@ from typing import Optional
 
 
 class ListNode:
-    pass
+    def __init__(self, val=0, next=None):
+        self.val = val      # значение узла
+        self.next = next    # ссылка на следующий узел
+
 
 
 class Solution:
