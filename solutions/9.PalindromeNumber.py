@@ -1,6 +1,6 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        list_a =list(str(x))
+        list_a = list(str(x))
         list_b = list_a[::-1]
         if list_a == list_b:
             return True
@@ -25,9 +25,6 @@ class Solution:
             if y[z - i] == y[z + i]:
                 i += 1
         """
-
-
-
 
 
 sol = Solution()
