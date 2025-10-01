@@ -14,5 +14,6 @@ print(hash(stringTest_copy))
 s.extend(["cucumber", "tomato"]) # [1, 2, 3, 4, 5, 6, 15, 7, 8, 'cucumber', 'tomato']
 print(s)
 
-s.insert(3, "pencil") # [1, 2, 3, 'pencil', 4, 5, 6, 15, 7, 8, 'cucumber', 'tomato']
+s.insert(3, "pencil") # [1, 2, 3, 'pencil', 4, 5, 6, 15, 7, 8, 'cucumber', 'tomato']        
 print(s)
+print(strigTest.encode)
