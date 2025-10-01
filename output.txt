@@ -1,0 +1,25 @@
+Input list: [1, 1, 2, 2, 3, 6, 4, 5]
+
+Expression list(set([])): [1, 2, 3, 4, 5, 6]
+Expression list(dict.fromkeys()): [1, 2, 3, 6, 4, 5]
+Expression 'Explicit iterative deduplication': [1, 2, 3, 6, 4, 5]
+----------
+Input setf A: {1, 2, 3, 4}
+Input set B: {3, 4, 5, 6}
+
+Union A | b: {1, 2, 3, 4, 5, 6}
+Intersection A & B: {3, 4}
+Difference A - B: {1, 2}
+Symmetric_difference A ^ B: {1, 2, 5, 6}
+-----------
+Input set A: {1, 2, 3}
+Input set B: {1, 2, 3, 4, 5}
+
+B is subset A: False
+A is subset B: True
+B is superset A: True
+A is superset B: False
+A is disjoint B: False
+-----------
+Updated a from b: {1, 2, 3, 4, 5}
+Intersection_update s & t: {3, 4}
