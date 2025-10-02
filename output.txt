@@ -4,7 +4,7 @@ Expression list(set([])): [1, 2, 3, 4, 5, 6]
 Expression list(dict.fromkeys()): [1, 2, 3, 6, 4, 5]
 Expression 'Explicit iterative deduplication': [1, 2, 3, 6, 4, 5]
 ----------
-Input setf A: {1, 2, 3, 4}
+Input set A: {1, 2, 3, 4}
 Input set B: {3, 4, 5, 6}
 
 Union A | b: {1, 2, 3, 4, 5, 6}
