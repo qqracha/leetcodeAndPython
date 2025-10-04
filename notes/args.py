@@ -13,4 +13,4 @@ print(my_sum(1, 2, 3, 4, 5))  # 15
 def info(**kwargs):
     print(kwargs)
 
-info(name = "Алиса", age = 20)
+info(name = "Даша", age = 20)
