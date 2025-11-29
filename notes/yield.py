@@ -1,50 +1,19 @@
-# Генератор - вид итератора, который не хранит в себе последовательность данных, а вычисляет каждое следующее значение при помощи формулы
+"""
+Генератор — это особый тип итератора в Python, который создаёт значения по требованию, 
+а не хранит всю последовательность в памяти сразу. 
+Это объект, который возвращает элементы по одному за раз при каждом обращении к нему.
 
-# Пример генератора:
-def count_up_to(n):
-    print("Generator start!")
-    i = 1
-    while i <= n: # Пока i меньше или равен n
-        yield i # Возвращает значение и "замораживает" функцию
+Ленивые вычисления — генератор вычисляет следующее значение только при вызове метода next(), 
+а не создаёт все элементы заранее. Он хранит в памяти только последний вычисленный элемент, 
+правило перехода к следующему и условие остановки
+"""
+
+def my_generator(n):
+    i = 0
+    while i < n:
+        yield i
         i += 1
-    print("Generator end!")
 
-
-# Инициализируем генератор
-gen = count_up_to(10)
-
-# Получаем значение по одному
-for number in gen:
-    print(number)
-
-# Пример генератора с .send и возведением в квадрат
-def generator_example():
-    value = yield #  точка ожидания внешнего значения
-    yield value ** 2
-
-gen_e = generator_example()
-
-next(gen_e)
-print(gen_e.send(10))
-
-# Пример генератора с ошибкой
-def generator_with_exception():
-    try:
-        yield
-    except ValueError:
-        yield "Oops.."
-
-gen_error = generator_with_exception()
-next(gen_error) # Запускаем оператор до первого yield
-print(gen_error.throw(ValueError)) # Выбрасывает исключение внутри генератора
-
-# Пример генератора с методом .close
-def generator_with_close():
-    try:
-        yield 1
-    except GeneratorExit:
-        print("Generator was ended!")
-
-gen_close = generator_with_close()
-next(gen_close)
-gen_close.close()
+gen = my_generator(3)
+print(next(gen))  # 0
+print(next(gen))  # 1
