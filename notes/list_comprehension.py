@@ -24,9 +24,6 @@ List Comprehension можно разбить на 3 части: Expression, Iter
 
 x = [1, 0, 2, 0, 3, 0]
 
-print([i for i in x if i != 0])
-
-print([i**2 for i in x if i != 0])
-
-z = [x if x % 2 == 0 else -x for x in range(5)]
-print([x if x % 2 == 0 else -x for x in range(5)])
+print([i for i in x if i != 0]) # [1, 2, 3]
+print([i**2 for i in x if i != 0]) # [1, 4, 9]
+print([x if x % 2 == 0 else -x for x in range(5)]) # [0, -1, 2, -3, 4]
