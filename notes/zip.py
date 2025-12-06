@@ -19,3 +19,14 @@ values = ['Иван', 25, 'Москва']
 
 dictionary = dict(zip(keys, values))
 print(dictionary)  # {'имя': 'Иван', 'возраст': 25, 'город': 'Москва'}
+
+
+x = 'hello'
+y = 'world'
+
+print(*list(zip(x, y)), sep='\n')
+# ('h', 'w')
+# ('e', 'o')
+# ('l', 'r')
+# ('l', 'l')
+# ('o', 'd')

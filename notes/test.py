@@ -1,3 +1,4 @@
-x = 0 or 2
-y = not x
-print(x, y)
+x = ['a', 'b', 'c', 'd']
+y = list(enumerate(x))
+print(y)
+print(type(y[1]))
