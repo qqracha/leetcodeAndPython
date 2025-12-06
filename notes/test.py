@@ -1,4 +1,4 @@
-x = ['a', 'b', 'c', 'd']
-y = list(enumerate(x))
-print(y)
-print(type(y[1]))
+x = list(range(1,11))
+a, b, *c, d, e = x
+print(x)
+print(c)
