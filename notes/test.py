@@ -1,4 +1,5 @@
-x = list(range(1,11))
-a, b, *c, d, e = x
-print(x)
-print(c)
+x = {1, 2, 3}
+y = {2, 3, 4}
+
+print(x - y)
+print(y - x)
