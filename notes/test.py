@@ -1,4 +1,4 @@
-x = {1, 2, 3}
-y = {}
-
-print(x & y)
+y = {1,2}
+x = {}
+print(type(y))
+print(type(x))

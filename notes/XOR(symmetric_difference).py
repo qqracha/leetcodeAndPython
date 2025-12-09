@@ -10,7 +10,7 @@ y = {2, 3, 4}
 
 print(x ^ y)
 print(5 ^ 2) # 7
-print(1 ^ 6) # 7
+print(10 ^ 3) # 7
 
 a = 5
 b = 2
