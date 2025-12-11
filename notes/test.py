@@ -1,4 +1,3 @@
-y = {1,2}
-x = {}
-print(type(y))
-print(type(x))
+x = ['a', 'b', 'c', 'd']
+y = [i for i in enumerate(x, start=5)]
+print(y)
