@@ -1,0 +1,7 @@
+# Python заметки
+
+Здесь собраны мои заметки по различным концепциям Python с примерами кода.
+
+## Содержание
+
+- [Abstraction](abstraction.md)- [Any](any.md)- [Append Extend](append_extend.md)- [Args](args.md)- [B[1][0]](b[1][0].md)- [Bcrypt Test](bcrypt_test.md)- [Context Manager](context_manager.md)- [Copy Lib](copy_lib.md)- [Decorator](decorator.md)- [Deep Copy](deep_copy.md)- [Def Func(X=[])](def_func(x=[]).md)- [Del](del.md)- [Dict](dict.md)- [Dict Arguments](dict_arguments.md)- [Docstring](docstring.md)- [Encapsulation](encapsulation.md)- [Format](format.md)- [Fromkeys Dictzip](fromkeys_dictzip.md)- [Generator Expression](generator_expression.md)- [Global](global.md)- [Global Count](global_count.md)- [Hash](hash.md)- [Hash Table](hash_table.md)- [Inheritance](inheritance.md)- [Intersection](intersection.md)- [Lambda](lambda.md)- [List Comprehension](list_comprehension.md)- [Main](main.md)- [Map](map.md)- [Multiplication](multiplication.md)- [Nonlocal](nonlocal.md)- [Pydantic Is](pydantic_is.md)- [Rjast](rjast.md)- [Separator](separator.md)- [Set](set.md)- [Shallow Copy](shallow_copy.md)- [Sort](sort.md)- [Split](split.md)- [Starred Expression](starred_expression.md)- [Test](test.md)- [Title](title.md)- [True False Int](true_false_int.md)- [Truth Value](truth_value.md)- [Types](types.md)- [Union](union.md)- [Update](update.md)- [Xor(Symmetric Difference)](XOR(symmetric_difference).md)- [Yield](yield.md)- [Zip](zip.md)
