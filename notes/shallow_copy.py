@@ -1,6 +1,7 @@
-# What this code outputs and why?
-# Shallow copy - поверхностная копия
-
+"""
+Shallow copy - поверхностная копия.
+Поверхностная копия НЕ РАВНО объект.
+"""
 a = [1]
 b = [0, a]
 c = b[:]
