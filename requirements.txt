@@ -1,0 +1,7 @@
+mkdocs>=1.5.0
+mkdocs-material>=9.5.0
+
+pymdown-extensions>=10.7
+click==8.2.1 # это важно, иначе ломается автообновление
+
+watchdog>=3.0.0

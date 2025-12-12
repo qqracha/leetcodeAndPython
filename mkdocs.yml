@@ -1,114 +1,42 @@
-# Основная информация о сайте
-site_name: LEETCODEANDPYTHON
-site_description: Python заметки и решения LeetCode
-site_author: Your Name
-site_url: https://yourusername.github.io/leetcodeandpython/
+# Основная информация
+site_name: leetcodeAndPython
+site_url: https://github.com/qqracha/leetcodeAndPython
 
-# Репозиторий (замените на свой)
-repo_name: yourusername/leetcodeandpython
-repo_url: https://github.com/yourusername/leetcodeandpython
-edit_uri: edit/main/docs/
+# Репозиторий
+repo_name: leetcodeAndPython
+repo_url: https://github.com/qqracha/leetcodeAndPython
 
-# Директории
-docs_dir: docs
-site_dir: site
-
-# Тема
+# shadcn
 theme:
-  name: material
-  language: ru
-  palette:
-    # Светлая тема
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Переключить на тёмную тему
-    # Тёмная тема
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Переключить на светлую тему
-  
-  features:
-    - navigation.instant      # Мгновенная загрузка страниц
-    - navigation.tracking     # Отслеживание якорей в URL
-    - navigation.tabs         # Вкладки навигации
-    - navigation.sections     # Секции в навигации
-    - navigation.expand       # Автоматическое раскрытие навигации
-    - navigation.top          # Кнопка "Наверх"
-    - search.suggest          # Подсказки при поиске
-    - search.highlight        # Подсветка результатов поиска
-    - content.code.copy       # Кнопка копирования кода
-    - content.code.annotate   # Аннотации в коде
-
-  icon:
-    repo: fontawesome/brands/github
+  name: shadcn
+  show_title: true # show the title in the top bar
+  show_stargazers: true # show the stargazers in the top bar
+  pygments_style: # default styles 
+        light: shadcn-light
+        dark: github-dark
+  topbar_sections: true # NEW!
+  show_datetime: true 
 
 # Плагины
 plugins:
-  - search:
-      lang: 
-        - ru
-        - en
+  - search
 
 # Markdown расширения
 markdown_extensions:
-  # Python Markdown
-  - abbr
   - admonition
   - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - toc:
-      permalink: true
-      toc_depth: 3
-  
-  # Python Markdown Extensions
+  - codehilite
+  - pymdownx.highlight
+  - shadcn.extensions.codexec
+  - pymdownx.superfences
+  - pymdownx.blocks.caption
+  - pymdownx.blocks.details
+  - pymdownx.blocks.tab
+  - pymdownx.progressbar
   - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
+      generic: true # required to work
   - pymdownx.snippets:
       base_path: ["."]
-      check_paths: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
 
-# Дополнительные настройки
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/yourusername
-    - icon: fontawesome/brands/python
-      link: https://www.python.org/
-  
-  generator: false  # Убрать "Made with Material for MkDocs"
-
-# Copyright
-copyright: Copyright &copy; 2025 Your Name
+extra_css:
+  - stylescheets/extra.css

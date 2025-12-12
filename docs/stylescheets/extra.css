@@ -1,0 +1,63 @@
+/* ДА КОРЯВО, но мне нравится */
+
+/* Тёмная тема: принудительно задаём фон */
+.dark,
+.dark body,
+.dark main {
+  background: #191A1A !important;
+}
+
+/* Часто у shadcn контент лежит в контейнере; подстрахуемся */
+.dark .container,
+.dark .prose,
+.dark .content {
+  background: #191A1A !important;
+}
+
+/* Footer: фон и граница */
+.dark footer,
+.dark footer[view-transition-name="footer"] {
+  background-color: #191A1A !important; /* гармоничный серый к #191A1A (раньше, но не сейчас) */
+}
+
+/* Footer: основной текст */
+.dark footer,
+.dark footer * {
+  color: #E8E8E8 !important;
+}
+
+/* Footer: приглушённый текст (text-muted-foreground) */
+.dark footer .text-muted-foreground {
+  color: #B8B8B8 !important;
+}
+
+/* Header / Topbar background */
+.dark header[view-transition-name="header"],
+.dark header.bg-background {
+  background-color: #191A1A  !important; /* гармоничный серый к #191A1A (раньше, но не сейчас) */
+}
+
+/* Search button (dialog trigger in topbar) */
+.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"] {
+  background-color: #242526 !important;  /* гармоничный серый */
+  color: #E8E8E8 !important;
+}
+
+/* Hover / focus */
+.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:hover {
+  background-color: #2F3031 !important;  /* чуть светлее */
+}
+
+.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus,
+.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus-visible {
+  outline: 2px solid #4A4B4C !important;
+  outline-offset: 2px;
+}
+
+/* Right TOC: sticky "On This Page" header */
+.dark p.text-muted-foreground.bg-background.sticky.top-0 {
+  background-color: #191A1A !important; /* тот же серый, что для панелей */
+  color: #B8B8B8 !important;            /* приглушённый текст */
+  border-bottom: 1px solid #333436 !important;
+}
+
