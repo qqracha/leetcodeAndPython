@@ -1,7 +1,16 @@
+# Core
 mkdocs>=1.5.0
-mkdocs-material>=9.5.0
 
+# Theme
+mkdocs-shadcn>=0.0.0
+
+# Markdown extensions / highlighting 
 pymdown-extensions>=10.7
-click==8.2.1 # это важно, иначе ломается автообновление
+pygments>=2.16.0
 
+# Deploy to GitHub Pages via `mkdocs gh-deploy`
+ghp-import>=2.1.0
+
+# Dev server / autoreload
+click==8.2.1
 watchdog>=3.0.0
