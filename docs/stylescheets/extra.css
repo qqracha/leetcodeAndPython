@@ -14,22 +14,6 @@
   background: #191A1A !important;
 }
 
-/* Footer: фон и граница */
-.dark footer,
-.dark footer[view-transition-name="footer"] {
-  background-color: #191A1A !important; /* гармоничный серый к #191A1A (раньше, но не сейчас) */
-}
-
-/* Footer: основной текст */
-.dark footer,
-.dark footer * {
-  color: #E8E8E8 !important;
-}
-
-/* Footer: приглушённый текст (text-muted-foreground) */
-.dark footer .text-muted-foreground {
-  color: #B8B8B8 !important;
-}
 
 /* Header / Topbar background */
 .dark header[view-transition-name="header"],
@@ -61,3 +45,64 @@
   border-bottom: 1px solid #333436 !important;
 }
 
+/* Keyboard shortcuts (kbd) в кнопке поиска и везде */
+.dark kbd.bg-background,
+.dark kbd {
+  background-color: #2F3031 !important; /* чуть светлее панелей для контраста */
+  color: #E8E8E8 !important;
+  border: 1px solid #3A3B3C !important;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* На всякий: если внутри кнопки поиска */
+.dark button kbd {
+  background-color: #2F3031 !important;
+  color: #E8E8E8 !important;
+}
+
+.dark kbd {
+  background-color: #2F3031 !important;
+  color: #E8E8E8 !important;
+  border: 1px solid #3A3B3C !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Search dialog/popover background */
+.dark [id*="search-dialog"],
+.dark [id="mkdocs-search-results"],
+.dark .bg-popover {
+  background: #242526 !important; /* гармоничный серый */
+  border: 1px solid #3A3B3C !important;
+}
+
+/* Search results: заголовки и текст */
+.dark [id="mkdocs-search-results"] h3,
+.dark [id="mkdocs-search-results"] a {
+  color: #FFFFFF !important;
+}
+
+.dark [id="mkdocs-search-results"] p {
+  color: #B8B8B8 !important;
+}
+
+/* Search results: hover по результату */
+.dark [id="mkdocs-search-results"] article:hover {
+  background-color: #2F3031 !important;
+}
+
+.dark footer {
+  display: none !important;
+}
+
+/* блок с информацией*/
+.dark .admonition.info {
+  background-color: rgba(70, 124, 199, 0.137) !important;
+}
+
+.dark .admonition.info code {
+  background-color: rgba(56, 139, 253, 0.2) !important;
+  color: #79c0ff !important;
+}

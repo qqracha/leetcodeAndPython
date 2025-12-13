@@ -13,7 +13,7 @@ theme:
   show_stargazers: true # show the stargazers in the top bar
   pygments_style: # default styles 
         light: shadcn-light
-        dark: github-dark
+        dark: native
   topbar_sections: true # NEW!
   show_datetime: true 
 
