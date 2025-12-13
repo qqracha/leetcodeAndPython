@@ -39,4 +39,5 @@ markdown_extensions:
       base_path: ["."]
 
 extra_css:
-  - stylescheets/extra.css
+  - stylesheets/extra.css
+  - stylesheets/pygments-custom.css

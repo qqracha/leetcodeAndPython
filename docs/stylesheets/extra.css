@@ -4,67 +4,67 @@
 .dark,
 .dark body,
 .dark main {
-  background: #191A1A !important;
+  background: #191A1A;
 }
 
 /* Часто у shadcn контент лежит в контейнере, терпим; */
 .dark .container,
 .dark .prose,
 .dark .content {
-  background: #191A1A !important;
+  background: #191A1A;
 }
 
 
 /* Header / Topbar background */
 .dark header[view-transition-name="header"],
 .dark header.bg-background {
-  background-color: #191A1A  !important;
+  background-color: #191A1A ;
 }
 
 /* Search button (dialog trigger in topbar) */
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"] {
-  background-color: #242526 !important;
-  color: #E8E8E8 !important;
+  background-color: #242526;
+  color: #E8E8E8;
 }
 
 /* Hover / focus */
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:hover {
-  background-color: #2F3031 !important;
+  background-color: #2F3031;
 }
 
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus,
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus-visible {
-  outline: 2px solid #4A4B4C !important;
+  outline: 2px solid #4A4B4C;
   outline-offset: 2px;
 }
 
 /* Right TOC: sticky "On This Page" header */
 .dark p.text-muted-foreground.bg-background.sticky.top-0 {
-  background-color: #191A1A !important;
-  color: #B8B8B8 !important;
-  border-bottom: 1px solid #333436 !important;
+  background-color: #191A1A;
+  color: #B8B8B8;
+  border-bottom: 1px solid #333436;
 }
 
 /* Keyboard shortcuts (kbd) в кнопке поиска и везде */
 .dark kbd.bg-background,
 .dark kbd {
-  background-color: #2F3031 !important;
-  color: #E8E8E8 !important;
-  border: 1px solid #3A3B3C !important;
+  background-color: #2F3031;
+  color: #E8E8E8;
+  border: 1px solid #3A3B3C;
   border-radius: 4px;
   padding: 2px 6px;
 }
 
 /* На всякий: если внутри кнопки поиска */
 .dark button kbd {
-  background-color: #2F3031 !important;
-  color: #E8E8E8 !important;
+  background-color: #2F3031;
+  color: #E8E8E8;
 }
 
 .dark kbd {
-  background-color: #2F3031 !important;
-  color: #E8E8E8 !important;
-  border: 1px solid #3A3B3C !important;
+  background-color: #2F3031;
+  color: #E8E8E8;
+  border: 1px solid #3A3B3C;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
   border-radius: 4px;
   padding: 2px 6px;
@@ -74,69 +74,70 @@
 .dark [id*="search-dialog"],
 .dark [id="mkdocs-search-results"],
 .dark .bg-popover {
-  background: #242526 !important;
-  border: 1px solid #3A3B3C !important;
+  background: #242526;
+  border: 1px solid #3A3B3C;
 }
 
 /* Search results: заголовки и текст */
 .dark [id="mkdocs-search-results"] h3,
 .dark [id="mkdocs-search-results"] a {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 
 .dark [id="mkdocs-search-results"] p {
-  color: #B8B8B8 !important;
+  color: #B8B8B8;
 }
 
 /* Search results: hover по результату */
 .dark [id="mkdocs-search-results"] article:hover {
-  background-color: #2F3031 !important;
+  background-color: #2F3031;
 }
 
 /* Сегодня без футера*/
 .dark footer {
-  display: none !important;
+  display: none;
 }
 
 /* Блок info*/
 .dark .admonition.info {
-  background-color: rgba(70, 124, 199, 0.137) !important;
+  background-color: rgba(70, 124, 199, 0.137);
+  border: 0px
 }
 
 /* Внутри блока info*/
 .dark .admonition.info code {
-  background-color: rgba(56, 139, 253, 0.2) !important;
-  color: #79c0ff !important;
+  background-color: rgba(56, 139, 253, 0.2);
+  color: #79c0ff;
 }
 /* Блок WARNINGS*/
 .dark .admonition.warning {
-  background-color: rgba(210, 153, 34, 0.10) !important;
-  border: 1px solid rgba(210, 153, 34, 0.45) !important;
+  background-color: rgba(210, 153, 34, 0.10);
+  border: 1px solid rgba(210, 153, 34, 0.45);
 }
 
 /* Внутри WARNING */
 .dark .admonition.warning code {
-  background: rgba(210, 154, 34, 0.26) !important;
-  color: #f5c85e !important;
+  background: rgba(210, 154, 34, 0.26);
+  color: #f5c85e;
 }
 
 /* DANGER/ERROR*/
 .dark .admonition.danger,
 .dark .admonition.error {
-  background-color: rgba(248, 81, 73, 0.10) !important;
-  border: 1px solid rgba(248, 81, 73, 0.45) !important;
+  background-color: rgba(248, 81, 73, 0.10);
+  border: 1px solid rgba(248, 81, 73, 0.45);
 }
 
 /* Внутри DANGER/ERROR*/
 .dark .admonition.danger code,
 .dark .admonition.error code {
-  color: #ff7b72 !important;
+  color: #ff7b72;
 }
 
 /* Блок вывода в примерах с codexec */
 .dark .codexec-result {
-  background-color: #202020 !important; 
-  border: 1px solid #2F3031 !important; 
+  background-color: #202020; 
+  border: 1px solid #2F3031; 
 }
 
 .dark .badge {
@@ -150,22 +151,52 @@
 
 .dark #mkdocs-search-results a, 
 .dark #mkdocs-search-results a:visited {
-  color: #D990B9 !important;
+  color: #D990B9;
 }
 
-/* Обводка “кнопок-ссылок” */
+/* Цвет текста “кнопок-ссылок” */
 .dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/notes/"] {
-  border: 1px solid #8a5b75 !important;
+  color: #bd799e;
 }
 
+.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/leetcode/"] { 
+  color: #bd799e;}
+.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/"] { 
+  color: #bd799e;}
 
 /* Наведение */
 .dark a[data-slot="button"]:hover{
-  background: rgba(217, 144, 185, 0.20) !important;
+  background: rgba(217, 144, 185, 0.20);
 }
 
 /* Фокус с клавиатуры (Tab) */
 .dark a[data-slot="button"]:focus-visible{
-  outline: 2px solid rgba(217, 144, 185, 0.55) !important;
+  outline: 2px solid rgba(217, 144, 185, 0.55);
   outline-offset: 2px;
+}
+
+.dark a[data-slot="sidebar-menu-button"][data-active="true"] {
+  background: transparent;
+  border: 0px;
+  color: #bd799e
+}
+
+.dark a[data-slot="sidebar-menu-button"]:hover {
+  transition: color 80ms ease;
+  background: transparent;
+  color: #b9769c
+}
+
+.dark a[data-slot="sidebar-menu-button"]:hover::after {
+  background: transparent;
+}
+
+.dark a.link-accent {
+  color: #D990B9;
+  text-decoration: none;
+}
+.dark a.link-accent:hover {
+  color: #E6A6C9;
+  text-decoration-line: underline;
+  text-decoration-color: #E6A6C9;
 }
