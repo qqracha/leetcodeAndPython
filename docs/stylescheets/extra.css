@@ -7,7 +7,7 @@
   background: #191A1A !important;
 }
 
-/* Часто у shadcn контент лежит в контейнере; подстрахуемся */
+/* Часто у shadcn контент лежит в контейнере, терпим; */
 .dark .container,
 .dark .prose,
 .dark .content {
@@ -18,18 +18,18 @@
 /* Header / Topbar background */
 .dark header[view-transition-name="header"],
 .dark header.bg-background {
-  background-color: #191A1A  !important; /* гармоничный серый к #191A1A (раньше, но не сейчас) */
+  background-color: #191A1A  !important;
 }
 
 /* Search button (dialog trigger in topbar) */
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"] {
-  background-color: #242526 !important;  /* гармоничный серый */
+  background-color: #242526 !important;
   color: #E8E8E8 !important;
 }
 
 /* Hover / focus */
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:hover {
-  background-color: #2F3031 !important;  /* чуть светлее */
+  background-color: #2F3031 !important;
 }
 
 .dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus,
@@ -40,15 +40,15 @@
 
 /* Right TOC: sticky "On This Page" header */
 .dark p.text-muted-foreground.bg-background.sticky.top-0 {
-  background-color: #191A1A !important; /* тот же серый, что для панелей */
-  color: #B8B8B8 !important;            /* приглушённый текст */
+  background-color: #191A1A !important;
+  color: #B8B8B8 !important;
   border-bottom: 1px solid #333436 !important;
 }
 
 /* Keyboard shortcuts (kbd) в кнопке поиска и везде */
 .dark kbd.bg-background,
 .dark kbd {
-  background-color: #2F3031 !important; /* чуть светлее панелей для контраста */
+  background-color: #2F3031 !important;
   color: #E8E8E8 !important;
   border: 1px solid #3A3B3C !important;
   border-radius: 4px;
@@ -74,7 +74,7 @@
 .dark [id*="search-dialog"],
 .dark [id="mkdocs-search-results"],
 .dark .bg-popover {
-  background: #242526 !important; /* гармоничный серый */
+  background: #242526 !important;
   border: 1px solid #3A3B3C !important;
 }
 
@@ -93,16 +93,79 @@
   background-color: #2F3031 !important;
 }
 
+/* Сегодня без футера*/
 .dark footer {
   display: none !important;
 }
 
-/* блок с информацией*/
+/* Блок info*/
 .dark .admonition.info {
   background-color: rgba(70, 124, 199, 0.137) !important;
 }
 
+/* Внутри блока info*/
 .dark .admonition.info code {
   background-color: rgba(56, 139, 253, 0.2) !important;
   color: #79c0ff !important;
+}
+/* Блок WARNINGS*/
+.dark .admonition.warning {
+  background-color: rgba(210, 153, 34, 0.10) !important;
+  border: 1px solid rgba(210, 153, 34, 0.45) !important;
+}
+
+/* Внутри WARNING */
+.dark .admonition.warning code {
+  background: rgba(210, 154, 34, 0.26) !important;
+  color: #f5c85e !important;
+}
+
+/* DANGER/ERROR*/
+.dark .admonition.danger,
+.dark .admonition.error {
+  background-color: rgba(248, 81, 73, 0.10) !important;
+  border: 1px solid rgba(248, 81, 73, 0.45) !important;
+}
+
+/* Внутри DANGER/ERROR*/
+.dark .admonition.danger code,
+.dark .admonition.error code {
+  color: #ff7b72 !important;
+}
+
+/* Блок вывода в примерах с codexec */
+.dark .codexec-result {
+  background-color: #202020 !important; 
+  border: 1px solid #2F3031 !important; 
+}
+
+.dark .badge {
+  background: rgba(110,118,129,0.22);
+  border-radius: 4px;
+  color: #D990B9;
+  padding: 0.12em 0.5em;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.dark #mkdocs-search-results a, 
+.dark #mkdocs-search-results a:visited {
+  color: #D990B9 !important;
+}
+
+/* Обводка “кнопок-ссылок” */
+.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/notes/"] {
+  border: 1px solid #8a5b75 !important;
+}
+
+
+/* Наведение */
+.dark a[data-slot="button"]:hover{
+  background: rgba(217, 144, 185, 0.20) !important;
+}
+
+/* Фокус с клавиатуры (Tab) */
+.dark a[data-slot="button"]:focus-visible{
+  outline: 2px solid rgba(217, 144, 185, 0.55) !important;
+  outline-offset: 2px;
 }
