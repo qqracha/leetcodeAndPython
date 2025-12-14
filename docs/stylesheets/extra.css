@@ -155,13 +155,13 @@
 }
 
 /* Цвет текста “кнопок-ссылок” */
-.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/notes/"] {
+.dark a[data-slot="button"][href^="/leetcodeAndPython/notes/"] {
   color: #bd799e;
 }
 
-.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/leetcode/"] { 
+.dark a[data-slot="button"][href^="/leetcodeAndPython/leetcode/"] { 
   color: #bd799e;}
-.dark a[data-slot="button"][href^="/qqracha/leetcodeAndPython/"] { 
+.dark a[data-slot="button"][href^="/leetcodeAndPython/"] { 
   color: #bd799e;}
 
 /* Наведение */
