@@ -98,6 +98,11 @@
   display: none;
 }
 
+/* И даже на белой без футера*/
+footer {
+  display: none;
+}
+
 /* Блок info*/
 .dark .admonition.info {
   background-color: rgba(70, 124, 199, 0.137);
