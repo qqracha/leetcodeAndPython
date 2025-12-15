@@ -1,40 +1,41 @@
-# Основная информация
 site_name: leetcodeAndPython
 site_url: https://qqracha.github.io/leetcodeAndPython/
 
-# Репозиторий
 repo_name: leetcodeAndPython
 repo_url: https://github.com/qqracha/leetcodeAndPython
+edit_uri: edit/main/docs/
 
-# shadcn
 theme:
-  name: shadcn
-  show_title: true # show the title in the top bar
-  show_stargazers: true # show the stargazers in the top bar
-  pygments_style: # default styles 
-        light: shadcn-light
-        dark: native
-  topbar_sections: true # NEW!
-  show_datetime: true 
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.footer
 
-# Плагины
 plugins:
   - search
 
-# Markdown расширения
 markdown_extensions:
   - admonition
   - attr_list
   - codehilite
   - pymdownx.highlight
-  - shadcn.extensions.codexec
   - pymdownx.superfences
   - pymdownx.blocks.caption
   - pymdownx.blocks.details
   - pymdownx.blocks.tab
   - pymdownx.progressbar
   - pymdownx.arithmatex:
-      generic: true # required to work
+      generic: true
   - pymdownx.snippets:
       base_path: ["."]
 

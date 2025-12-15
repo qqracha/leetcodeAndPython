@@ -1,152 +1,103 @@
-/* ДА КОРЯВО, но мне нравится */
+/* ===== Общие замечания =====
+ * Material переключает темы через data-md-color-scheme
+ * - светлая: [data-md-color-scheme="default"]
+ * - тёмная:  [data-md-color-scheme="slate"]
+ * Здесь настраиваем в основном тёмную схему.
+ */
 
-/* Тёмная тема: принудительно задаём фон */
-.dark,
-.dark body,
-.dark main {
-  background: #191A1A;
+/* Фон и базовый цвет текста в тёмной теме */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #191A1A;
+  --md-default-fg-color: #E8E8E8;
 }
 
-/* Часто у shadcn контент лежит в контейнере, терпим; */
-.dark .container,
-.dark .prose,
-.dark .content {
-  background: #191A1A;
-}
-
-
-/* Header / Topbar background */
-.dark header[view-transition-name="header"],
-.dark header.bg-background {
-  background-color: #191A1A ;
-}
-
-/* Search button (dialog trigger in topbar) */
-.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"] {
-  background-color: #242526;
-  color: #E8E8E8;
-}
-
-/* Hover / focus */
-.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:hover {
-  background-color: #2F3031;
-}
-
-.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus,
-.dark button[data-slot="dialog-trigger"][onclick*="onSearchBarClick"]:focus-visible {
-  outline: 2px solid #4A4B4C;
-  outline-offset: 2px;
-}
-
-/* Right TOC: sticky "On This Page" header */
-.dark p.text-muted-foreground.bg-background.sticky.top-0 {
+/* Основной контент */
+[data-md-color-scheme="slate"] .md-main {
   background-color: #191A1A;
+}
+
+/* Хедер / топбар */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #191A1A;
+  box-shadow: none;
+}
+
+/* Поисковая строка и диалог поиска */
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: #242526;
+}
+
+[data-md-color-scheme="slate"] .md-search__input {
+  color: #E8E8E8;
+}
+
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
   color: #B8B8B8;
-  border-bottom: 1px solid #333436;
 }
 
-/* Keyboard shortcuts (kbd) в кнопке поиска и везде */
-.dark kbd.bg-background,
-.dark kbd {
+/* Результаты поиска */
+[data-md-color-scheme="slate"] .md-search-result__item {
+  background-color: #242526;
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item:hover {
   background-color: #2F3031;
-  color: #E8E8E8;
-  border: 1px solid #3A3B3C;
-  border-radius: 4px;
-  padding: 2px 6px;
 }
 
-/* На всякий: если внутри кнопки поиска */
-.dark button kbd {
-  background-color: #2F3031;
-  color: #E8E8E8;
-}
-
-.dark kbd {
-  background-color: #2F3031;
-  color: #E8E8E8;
-  border: 1px solid #3A3B3C;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
-  border-radius: 4px;
-  padding: 2px 6px;
-}
-
-/* Search dialog/popover background */
-.dark [id*="search-dialog"],
-.dark [id="mkdocs-search-results"],
-.dark .bg-popover {
-  background: #242526;
-  border: 1px solid #3A3B3C;
-}
-
-/* Search results: заголовки и текст */
-.dark [id="mkdocs-search-results"] h3,
-.dark [id="mkdocs-search-results"] a {
+[data-md-color-scheme="slate"] .md-search-result__item a {
   color: #FFFFFF;
 }
 
-.dark [id="mkdocs-search-results"] p {
+[data-md-color-scheme="slate"] .md-search-result__item p {
   color: #B8B8B8;
 }
 
-/* Search results: hover по результату */
-.dark [id="mkdocs-search-results"] article:hover {
-  background-color: #2F3031;
-}
-
-/* Сегодня без футера*/
-.dark footer {
+/* Футер (если не нужен вовсе) */
+.md-footer {
   display: none;
 }
 
-/* И даже на белой без футера*/
-footer {
-  display: none;
+/* ---------- Admonitions (!!! info / warning / danger) ---------- */
+
+[data-md-color-scheme="slate"] .md-typeset .admonition--info,
+[data-md-color-scheme="slate"] .md-typeset details.admonition--info {
+  background-color: rgba(70, 124, 199, 0.14);
+  border: 0;
 }
 
-/* Блок info*/
-.dark .admonition.info {
-  background-color: rgba(70, 124, 199, 0.137);
-  border: 0px
-}
-
-/* Внутри блока info*/
-.dark .admonition.info code {
+[data-md-color-scheme="slate"] .md-typeset .admonition--info code {
   background-color: rgba(56, 139, 253, 0.2);
   color: #79c0ff;
 }
-/* Блок WARNINGS*/
-.dark .admonition.warning {
+
+[data-md-color-scheme="slate"] .md-typeset .admonition--warning,
+[data-md-color-scheme="slate"] .md-typeset details.admonition--warning {
   background-color: rgba(210, 153, 34, 0.10);
   border: 1px solid rgba(210, 153, 34, 0.45);
 }
 
-/* Внутри WARNING */
-.dark .admonition.warning code {
+[data-md-color-scheme="slate"] .md-typeset .admonition--warning code {
   background: rgba(210, 154, 34, 0.26);
   color: #f5c85e;
 }
 
-/* DANGER/ERROR*/
-.dark .admonition.danger,
-.dark .admonition.error {
+[data-md-color-scheme="slate"] .md-typeset .admonition--danger,
+[data-md-color-scheme="slate"] .md-typeset .admonition--error,
+[data-md-color-scheme="slate"] .md-typeset details.admonition--danger,
+[data-md-color-scheme="slate"] .md-typeset details.admonition--error {
   background-color: rgba(248, 81, 73, 0.10);
   border: 1px solid rgba(248, 81, 73, 0.45);
 }
 
-/* Внутри DANGER/ERROR*/
-.dark .admonition.danger code,
-.dark .admonition.error code {
+[data-md-color-scheme="slate"] .md-typeset .admonition--danger code,
+[data-md-color-scheme="slate"] .md-typeset .admonition--error code {
   color: #ff7b72;
 }
 
-/* Блок вывода в примерах с codexec */
-.dark .codexec-result {
-  background-color: #202020; 
-  border: 1px solid #2F3031; 
-}
+/* ---------- Badge (span.badge) ---------- */
 
-.dark .badge {
-  background: rgba(110,118,129,0.22);
+.md-typeset .badge {
+  background: rgba(110, 118, 129, 0.22);
   border-radius: 4px;
   color: #D990B9;
   padding: 0.12em 0.5em;
@@ -154,54 +105,50 @@ footer {
   line-height: 1.2;
 }
 
-.dark #mkdocs-search-results a, 
-.dark #mkdocs-search-results a:visited {
-  color: #D990B9;
-}
+/* ---------- Цвет ссылок-акцентов ---------- */
 
-/* Цвет текста “кнопок-ссылок” */
-.dark a[data-slot="button"][href^="/leetcodeAndPython/notes/"] {
-  color: #bd799e;
-}
-
-.dark a[data-slot="button"][href^="/leetcodeAndPython/leetcode/"] { 
-  color: #bd799e;}
-.dark a[data-slot="button"][href^="/leetcodeAndPython/"] { 
-  color: #bd799e;}
-
-/* Наведение */
-.dark a[data-slot="button"]:hover{
-  background: rgba(217, 144, 185, 0.20);
-}
-
-/* Фокус с клавиатуры (Tab) */
-.dark a[data-slot="button"]:focus-visible{
-  outline: 2px solid rgba(217, 144, 185, 0.55);
-  outline-offset: 2px;
-}
-
-.dark a[data-slot="sidebar-menu-button"][data-active="true"] {
-  background: transparent;
-  border: 0px;
-  color: #bd799e
-}
-
-.dark a[data-slot="sidebar-menu-button"]:hover {
-  transition: color 80ms ease;
-  background: transparent;
-  color: #b9769c
-}
-
-.dark a[data-slot="sidebar-menu-button"]:hover::after {
-  background: transparent;
-}
-
-.dark a.link-accent {
+.md-typeset a.link-accent {
   color: #D990B9;
   text-decoration: none;
 }
-.dark a.link-accent:hover {
+
+.md-typeset a.link-accent:hover {
   color: #E6A6C9;
   text-decoration-line: underline;
   text-decoration-color: #E6A6C9;
+}
+
+/* ---------- Ссылки в результатах поиска ---------- */
+
+[data-md-color-scheme="slate"] #mkdocs-search-results a,
+[data-md-color-scheme="slate"] #mkdocs-search-results a:visited {
+  color: #D990B9;
+}
+
+/* ---------- Боковое меню: активный пункт и hover ---------- */
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #bd799e;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: #b9769c;
+}
+
+/* Можно добавить лёгкий фон при hover */
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background-color: rgba(217, 144, 185, 0.12);
+}
+
+/* ---------- KBD (сочетания клавиш) ---------- */
+
+[data-md-color-scheme="slate"] .md-typeset kbd {
+  background-color: #2F3031;
+  color: #E8E8E8;
+  border: 1px solid #3A3B3C;
+  border-radius: 4px;
+  padding: 2px 6px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
