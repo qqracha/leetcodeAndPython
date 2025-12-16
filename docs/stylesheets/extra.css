@@ -1,97 +1,114 @@
-/* ===== Общие замечания =====
- * Material переключает темы через data-md-color-scheme
- * - светлая: [data-md-color-scheme="default"]
- * - тёмная:  [data-md-color-scheme="slate"]
- * Здесь настраиваем в основном тёмную схему.
- */
 
-/* Фон и базовый цвет текста в тёмной теме */
+/* -----------------------------
+VitePress-like (dark, purple)
+----------------------------- */
+
+/* Тёмная схема */
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #191A1A;
-  --md-default-fg-color: #E8E8E8;
+  /* Общие цвета */
+  --md-default-bg-color: #1E2129;
+  --md-default-fg-color: rgba(255,255,255,.88);
+  --md-default-fg-color--light: rgba(255,255,255,.68);
+  
+  /* Primary/Accent (для ссылок, активных состояний, мелких акцентов) */
+  --md-primary-fg-color: #bd799e;
+  --md-accent-fg-color: #d990b9;
+  
+  /* Код */
+  --md-code-bg-color: #20232b;
+  --md-code-fg-color: rgba(255,255,255,.90);
 }
 
-/* Основной контент */
-[data-md-color-scheme="slate"] .md-main {
-  background-color: #191A1A;
+/* Чуть “плотнее”, как у VitePress */
+[data-md-color-scheme="slate"] {
+  font-size: 15px;
 }
 
-/* Хедер / топбар */
+/* Хедер без яркого “материаловского” эффекта */
 [data-md-color-scheme="slate"] .md-header {
-  background-color: #191A1A;
+  background: rgba(22,24,29,.85);
+  backdrop-filter: blur(12px);
   box-shadow: none;
 }
 
-/* Поисковая строка и диалог поиска */
-[data-md-color-scheme="slate"] .md-search__form {
-  background-color: #242526;
+/* Контентная область */
+[data-md-color-scheme="slate"] .md-main {
+  background: #1E2129;
 }
 
-[data-md-color-scheme="slate"] .md-search__input {
-  color: #E8E8E8;
+/* Сайдбар: убираем “заливки” на hover, оставляем только цвет */
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  background: transparent !important;
 }
 
-[data-md-color-scheme="slate"] .md-search__input::placeholder {
-  color: #B8B8B8;
+/* Активный пункт (похоже на VitePress: спокойная подсветка + акцентный текст) */
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
+  color: #d990b9 !important;
 }
 
-/* Результаты поиска */
-[data-md-color-scheme="slate"] .md-search-result__item {
-  background-color: #242526;
+/* Ссылки в тексте */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #d990b9;
+}
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: #e6a6c9;
+  text-decoration-color: #e6a6c9;
 }
 
-[data-md-color-scheme="slate"] .md-search-result__item:hover {
-  background-color: #2F3031;
+/* Блоки кода: скругление и “карточка” */
+[data-md-color-scheme="slate"] .md-typeset pre > code,
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  background: #20232b;
+  border-radius: 12px;
 }
 
-[data-md-color-scheme="slate"] .md-search-result__item a {
-  color: #FFFFFF;
+/* Общая форма (пусть останется “карточкой”) */
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details.admonition {
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.08);
 }
 
-[data-md-color-scheme="slate"] .md-search-result__item p {
-  color: #B8B8B8;
+/* INFO / NOTE (синяя) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset .admonition.note,
+[data-md-color-scheme="slate"] .md-typeset details.info,
+[data-md-color-scheme="slate"] .md-typeset details.note {
+  background-color: rgba(56, 139, 253, 0.12);
+  border-color: rgba(56, 139, 253, 0.30);
 }
 
-/* Футер (если не нужен вовсе) */
-.md-footer {
-  display: none;
+/* WARNING (жёлтая) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  background-color: rgba(210, 153, 34, 0.12);
+  border-color: rgba(210, 153, 34, 0.35);
 }
 
-/* ---------- Admonitions (!!! info / warning / danger) ---------- */
-
-[data-md-color-scheme="slate"] .md-typeset .admonition--info,
-[data-md-color-scheme="slate"] .md-typeset details.admonition--info {
-  background-color: rgba(70, 124, 199, 0.14);
-  border: 0;
+/* DANGER / ERROR (красная) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
+[data-md-color-scheme="slate"] .md-typeset .admonition.error,
+[data-md-color-scheme="slate"] .md-typeset details.danger,
+[data-md-color-scheme="slate"] .md-typeset details.error {
+  background-color: rgba(248, 81, 73, 0.12);
+  border-color: rgba(248, 81, 73, 0.35);
 }
 
-[data-md-color-scheme="slate"] .md-typeset .admonition--info code {
-  background-color: rgba(56, 139, 253, 0.2);
-  color: #79c0ff;
-}
 
-[data-md-color-scheme="slate"] .md-typeset .admonition--warning,
-[data-md-color-scheme="slate"] .md-typeset details.admonition--warning {
-  background-color: rgba(210, 153, 34, 0.10);
-  border: 1px solid rgba(210, 153, 34, 0.45);
+/* Scrollbar в сайдбаре */
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
+  scrollbar-color: #bd799e transparent; /* Firefox */
 }
-
-[data-md-color-scheme="slate"] .md-typeset .admonition--warning code {
-  background: rgba(210, 154, 34, 0.26);
-  color: #f5c85e;
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar { width: 6px; }
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-track { background: transparent; }
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #bd799e;
+  border-radius: 3px;
 }
-
-[data-md-color-scheme="slate"] .md-typeset .admonition--danger,
-[data-md-color-scheme="slate"] .md-typeset .admonition--error,
-[data-md-color-scheme="slate"] .md-typeset details.admonition--danger,
-[data-md-color-scheme="slate"] .md-typeset details.admonition--error {
-  background-color: rgba(248, 81, 73, 0.10);
-  border: 1px solid rgba(248, 81, 73, 0.45);
-}
-
-[data-md-color-scheme="slate"] .md-typeset .admonition--danger code,
-[data-md-color-scheme="slate"] .md-typeset .admonition--error code {
-  color: #ff7b72;
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:active,
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover:active {
+  background-color: #8f5f7a;
 }
 
 /* ---------- Badge (span.badge) ---------- */
@@ -103,52 +120,4 @@
   padding: 0.12em 0.5em;
   font-size: 0.9em;
   line-height: 1.2;
-}
-
-/* ---------- Цвет ссылок-акцентов ---------- */
-
-.md-typeset a.link-accent {
-  color: #D990B9;
-  text-decoration: none;
-}
-
-.md-typeset a.link-accent:hover {
-  color: #E6A6C9;
-  text-decoration-line: underline;
-  text-decoration-color: #E6A6C9;
-}
-
-/* ---------- Ссылки в результатах поиска ---------- */
-
-[data-md-color-scheme="slate"] #mkdocs-search-results a,
-[data-md-color-scheme="slate"] #mkdocs-search-results a:visited {
-  color: #D990B9;
-}
-
-/* ---------- Боковое меню: активный пункт и hover ---------- */
-
-[data-md-color-scheme="slate"] .md-nav__link--active {
-  color: #bd799e;
-}
-
-[data-md-color-scheme="slate"] .md-nav__link:hover {
-  color: #b9769c;
-}
-
-/* Можно добавить лёгкий фон при hover */
-[data-md-color-scheme="slate"] .md-nav__link:hover {
-  background-color: rgba(217, 144, 185, 0.12);
-}
-
-/* ---------- KBD (сочетания клавиш) ---------- */
-
-[data-md-color-scheme="slate"] .md-typeset kbd {
-  background-color: #2F3031;
-  color: #E8E8E8;
-  border: 1px solid #3A3B3C;
-  border-radius: 4px;
-  padding: 2px 6px;
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
