@@ -1,9 +1,70 @@
+/* ============ Общие стили для всех тем ============ */
 
-/* -----------------------------
-VitePress-like (dark, purple)
------------------------------ */
+/* Размер текста по умолчанию */
+[data-md-color-scheme] {
+  font-size: 15px;
+}
 
-/* Тёмная схема */
+/* Active state при наведении */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: #d990b9 ;
+}
+
+/* Ссылки в тексте */
+.md-typeset a {
+  color: #d990b9;
+}
+
+.md-typeset a:hover {
+  color: #e6a6c9;
+  text-decoration: underline;
+  text-decoration-color: #e6a6c9;
+}
+
+/* Ссылки в тексте типа code*/
+.md-typeset a code {
+  color: inherit;
+}
+
+.md-typeset a code:hover{
+  background-color: transparent;
+}
+
+/* Общая форма admonition */
+.md-typeset .admonition {
+  border-radius: 12px;
+  border: 0px solid;
+  overflow: hidden;
+}
+
+/* Scrollbar в сайдбаре */
+.md-sidebar__scrollwrap {
+  scrollbar-color: #bd799e transparent; /* Firefox */
+}
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #bd799e;
+  border-radius: 3px;
+}
+
+/* Badge (span.badge) */
+.md-typeset .badge {
+  background: rgba(110, 118, 129, 0.22);
+  border-radius: 4px;
+  color: #D990B9;
+  padding: 0.12em 0.5em;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+/* Footer */
+.md-copyright {
+  display: none 
+}
+
+
+/* ============ Dark theme (slate) ============ */
+
 [data-md-color-scheme="slate"] {
   /* Общие цвета */
   --md-default-bg-color: #1E2129;
@@ -15,118 +76,73 @@ VitePress-like (dark, purple)
   --md-accent-fg-color: #d990b9;
   
   /* Код */
-  --md-code-bg-color: #20232b;
-  --md-code-fg-color: rgba(255,255,255,.90);
+  --md-code-bg-color: transparent;
 }
 
-/* Чуть “плотнее”, как у VitePress */
-[data-md-color-scheme="slate"] {
-  font-size: 15px;
-}
-
-/* Хедер без яркого “материаловского” эффекта */
+/* Хедер */
 [data-md-color-scheme="slate"] .md-header {
   background: rgba(22,24,29,.85);
   backdrop-filter: blur(12px);
   box-shadow: none;
 }
 
-/* Контентная область */
-[data-md-color-scheme="slate"] .md-main {
-  background: #1E2129;
-}
-
-/* Сайдбар: убираем “заливки” на hover, оставляем только цвет */
-[data-md-color-scheme="slate"] .md-nav__link:hover {
-  background: transparent !important;
-}
-
-/* Активный пункт (похоже на VitePress: спокойная подсветка + акцентный текст) */
-[data-md-color-scheme="slate"] .md-nav__link--active,
-[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
-  color: #d990b9 !important;
-}
-
-/* Ссылки в тексте */
-[data-md-color-scheme="slate"] .md-typeset a {
-  color: #d990b9;
-}
-[data-md-color-scheme="slate"] .md-typeset a:hover {
-  color: #e6a6c9;
-  text-decoration: underline;
-  text-decoration-color: #e6a6c9;
-}
-
-/* Блоки кода: скругление и “карточка” */
-[data-md-color-scheme="slate"] .md-typeset pre > code,
-[data-md-color-scheme="slate"] .md-typeset .highlight {
-  background: #20232b;
-  padding-left: 0;
-  border-radius: 12px;
-}
-
-/* Общая форма (пусть останется “карточкой”) */
-[data-md-color-scheme="slate"] .md-typeset .admonition,
-[data-md-color-scheme="slate"] .md-typeset details.admonition {
-  border-radius: 12px;
-  border: 0px solid;
-  overflow: hidden;
-}
+/* ----------- Admonition (slate) -----------*/
 
 /* INFO / NOTE (синяя) */
 [data-md-color-scheme="slate"] .md-typeset .admonition.info,
-[data-md-color-scheme="slate"] .md-typeset .admonition.note,
-[data-md-color-scheme="slate"] .md-typeset details.info,
-[data-md-color-scheme="slate"] .md-typeset details.note {
+[data-md-color-scheme="slate"] .md-typeset .admonition.note {
   background-color: rgba(56, 139, 253, 0.12);
   box-shadow: none;
 }
 
 /* WARNING (жёлтая) */
-[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
-[data-md-color-scheme="slate"] .md-typeset details.warning {
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning {
   background-color: rgba(210, 153, 34, 0.12);
-  border-color: rgba(210, 153, 34, 0.35);
 }
 
 /* DANGER / ERROR (красная) */
-[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
-[data-md-color-scheme="slate"] .md-typeset .admonition.error,
-[data-md-color-scheme="slate"] .md-typeset details.danger,
-[data-md-color-scheme="slate"] .md-typeset details.error {
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger {
   background-color: rgba(248, 81, 73, 0.12);
 }
 
 
-/* Scrollbar в сайдбаре */
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
-  scrollbar-color: #bd799e transparent; /* Firefox */
-}
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar { width: 6px; }
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-track { background: transparent; }
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background-color: #bd799e;
-  border-radius: 3px;
-}
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:active,
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover:active {
-  background-color: #8f5f7a;
-}
+/* ============ White theme (default) ============ */
 
-/* ---------- Badge (span.badge) ---------- */
+[data-md-color-scheme="default"] {
+  /* Общие цвета */
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: rgba(0, 0, 0, 0.88);
+  --md-default-fg-color--light: rgba(0, 0, 0, 0.68);
+  
+  /* Primary/Accent (для ссылок, активных состояний, мелких акцентов) */
+  --md-primary-fg-color: #bd799e;
+  --md-accent-fg-color: #d990b9;
 
-.md-typeset .badge {
-  background: rgba(110, 118, 129, 0.22);
-  border-radius: 4px;
-  color: #D990B9;
-  padding: 0.12em 0.5em;
-  font-size: 0.9em;
-  line-height: 1.2;
+  --md-code-bg-color: transparent;
 }
 
+/* Хедер */
+[data-md-color-scheme="default"] .md-header {
+  background: rgba(189, 121, 158,.85);
+  backdrop-filter: blur(12px);
+  box-shadow: none;
+}
 
-/* ----------- Footer  -----------*/
+/* ----------- Admonition (default) -----------*/
 
-.md-copyright {
-  display: none 
+/* INFO / NOTE (синяя) */
+[data-md-color-scheme="default"] .md-typeset .admonition.info,
+[data-md-color-scheme="default"] .md-typeset .admonition.note {
+  background-color: rgba(11, 94, 219, 0.08);
+  box-shadow: none;
+}
+
+/* WARNING (жёлтая) */
+[data-md-color-scheme="default"] .md-typeset .admonition.warning {
+  background-color: rgba(255, 193, 7, 0.15);
+}
+
+/* DANGER / ERROR (красная) */
+[data-md-color-scheme="default"] .md-typeset .admonition.danger {
+  background-color: rgba(220, 53, 69, 0.1);
 }
