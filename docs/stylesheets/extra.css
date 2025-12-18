@@ -53,6 +53,7 @@ VitePress-like (dark, purple)
 }
 [data-md-color-scheme="slate"] .md-typeset a:hover {
   color: #e6a6c9;
+  text-decoration: underline;
   text-decoration-color: #e6a6c9;
 }
 
@@ -60,6 +61,7 @@ VitePress-like (dark, purple)
 [data-md-color-scheme="slate"] .md-typeset pre > code,
 [data-md-color-scheme="slate"] .md-typeset .highlight {
   background: #20232b;
+  padding-left: 0;
   border-radius: 12px;
 }
 
@@ -67,7 +69,8 @@ VitePress-like (dark, purple)
 [data-md-color-scheme="slate"] .md-typeset .admonition,
 [data-md-color-scheme="slate"] .md-typeset details.admonition {
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 0px solid;
+  overflow: hidden;
 }
 
 /* INFO / NOTE (синяя) */
@@ -76,7 +79,7 @@ VitePress-like (dark, purple)
 [data-md-color-scheme="slate"] .md-typeset details.info,
 [data-md-color-scheme="slate"] .md-typeset details.note {
   background-color: rgba(56, 139, 253, 0.12);
-  border-color: rgba(56, 139, 253, 0.30);
+  box-shadow: none;
 }
 
 /* WARNING (жёлтая) */
@@ -92,7 +95,6 @@ VitePress-like (dark, purple)
 [data-md-color-scheme="slate"] .md-typeset details.danger,
 [data-md-color-scheme="slate"] .md-typeset details.error {
   background-color: rgba(248, 81, 73, 0.12);
-  border-color: rgba(248, 81, 73, 0.35);
 }
 
 

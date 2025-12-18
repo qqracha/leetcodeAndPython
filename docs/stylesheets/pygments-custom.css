@@ -1,14 +1,67 @@
-/* Общий фон и скругление для блоков кода в тёмной теме */
+/* Общий фон и скругление */
 [data-md-color-scheme="slate"] .md-typeset pre > code,
 [data-md-color-scheme="slate"] .md-typeset .highlight {
   background: #171717;
   border-radius: 10px;
 }
 
-/* Токены Pygments (цвета как у вас раньше) */
-[data-md-color-scheme="slate"] .md-typeset .highlight .k { color: #ff7b72; }  /* keyword */
-[data-md-color-scheme="slate"] .md-typeset .highlight .kn { color: #D990B9; }
-[data-md-color-scheme="slate"] .md-typeset .highlight .nf { color: #d2a8ff; } /* function name */
-[data-md-color-scheme="slate"] .md-typeset .highlight .s { color: #a5d6ff; }  /* string */
-[data-md-color-scheme="slate"] .md-typeset .highlight .c { color: #8b949e; }  /* comment */
-[data-md-color-scheme="slate"] .md-typeset .highlight .nn { color: #a5d6ff; } /* import / module */
+/* Полный набор Pygments-токенов для Python (GitHub Dark style) */
+[data-md-color-scheme="slate"] .md-typeset .highlight .k,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kc,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kd,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kp { 
+  color: #ff7b72; /* keyword: class, def, return, if */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .kn { 
+  color: #ff7b72; /* import/from */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nf,
+[data-md-color-scheme="slate"] .md-typeset .highlight .fm { 
+  color: #d2a8ff; /* function name */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nc { 
+  color: #79c0ff; /* class name */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .bp { 
+  color: #79c0ff; /* self, cls */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nb { 
+  color: #d2a8ff; /* print, len и другие built-in */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .s,
+[data-md-color-scheme="slate"] .md-typeset .highlight .s1,
+[data-md-color-scheme="slate"] .md-typeset .highlight .s2 { 
+  color: #a5d6ff; /* strings */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .c,
+[data-md-color-scheme="slate"] .md-typeset .highlight .c1 { 
+  color: #8b949e; /* comments */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .mi,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mf { 
+  color: #79c0ff; /* numbers */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .o { 
+  color: #ff7b72; /* operators: =, +, - */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .p { 
+  color: #c9d1d9; /* punctuation: (), [] */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nn { 
+  color: #79c0ff; /* module/import name */
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .n { 
+  color: #c9d1d9; /* обычные имена переменных */
+}
