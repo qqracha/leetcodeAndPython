@@ -1,4 +1,4 @@
-# LeetCode решения
+# Leetcode
 
 Коллекция моих решений задач с LeetCode.
 
