@@ -123,3 +123,10 @@ VitePress-like (dark, purple)
   font-size: 0.9em;
   line-height: 1.2;
 }
+
+
+/* ----------- Footer  -----------*/
+
+.md-copyright {
+  display: none 
+}
