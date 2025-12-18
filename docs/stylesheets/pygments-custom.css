@@ -1,7 +1,7 @@
 /* Общий фон и скругление */
 [data-md-color-scheme="slate"] .md-typeset pre > code,
 [data-md-color-scheme="slate"] .md-typeset .highlight {
-  background: #171717;
+  background: #17191F;
   border-radius: 10px;
 }
 

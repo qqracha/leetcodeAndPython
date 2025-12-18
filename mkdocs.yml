@@ -8,7 +8,7 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   font:
-    text: Inter
+    text: Roboto
     code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -30,7 +30,6 @@ plugins:
 markdown_extensions:
   - admonition
   - attr_list
-  - codehilite
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.blocks.caption
@@ -41,6 +40,9 @@ markdown_extensions:
       generic: true
   - pymdownx.snippets:
       base_path: ["."]
+  - toc:
+      permalink: '#'
+      permalink_title: "meow"
 
 extra_css:
   - stylesheets/extra.css

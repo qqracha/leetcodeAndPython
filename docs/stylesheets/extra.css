@@ -112,14 +112,3 @@ VitePress-like (dark, purple)
 [data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover:active {
   background-color: #8f5f7a;
 }
-
-/* ---------- Badge (span.badge) ---------- */
-
-.md-typeset .badge {
-  background: rgba(110, 118, 129, 0.22);
-  border-radius: 4px;
-  color: #D990B9;
-  padding: 0.12em 0.5em;
-  font-size: 0.9em;
-  line-height: 1.2;
-}

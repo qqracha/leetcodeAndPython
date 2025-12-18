@@ -15,25 +15,24 @@
 <span class="badge">my_func = empty_deco(my_func)</span>
 
 ## Пример
-!!! note "Пример:"
-    Подсчёт времени выполнения функции при помощи `Декоратора`.
+```python
 
-        :::python
-        from typing import Callable
-        import time
+    from typing import Callable
+    import time
 
-        def empty_deco(func):  # Identity decorator
-            def wrapper(): # Создание обёртки
-                start = time.time()
-                res = func()
-                end = time.time()
-                print(f"Исполнение заняло {end-start}")
-            return wrapper
+    def empty_deco(func):  # Identity decorator
+        def wrapper(): # Создание обёртки
+            start = time.time()
+            res = func()
+            end = time.time()
+            print(f"Исполнение заняло {end-start}")
+        return wrapper
 
-        # Decorator
-        @empty_deco
-        def my_func():
-            time.sleep(0.6)
-            return 124
+    # Decorator
+    @empty_deco
+    def my_func():
+        time.sleep(0.6)
+        return 124
 
-        print(my_func())
+    print(my_func())
+```
