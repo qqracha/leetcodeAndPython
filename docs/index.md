@@ -7,7 +7,7 @@
 
 ### Навигация
 
-#### [Python заметки](notes/index.md)
+#### [Python заметки](python/index.md)
 Заметки по основам и продвинутым концепциям Python: decorators, generators, context managers и многое другое.
 
 #### [LeetCode](leetcode/index.md)
