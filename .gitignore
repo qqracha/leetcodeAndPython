@@ -110,3 +110,7 @@ config.ini
 *.session
 #sqlite files
 *.db
+
+.telegraph_token
+create_post.py
+delete_post.py
