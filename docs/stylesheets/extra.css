@@ -31,6 +31,7 @@
   background-color: transparent;
 }
 
+
 /* Общая форма admonition */
 .md-typeset .admonition {
   border-radius: 12px;
@@ -59,7 +60,11 @@
 
 /* Footer */
 .md-copyright {
-  display: none 
+  display: none; 
+}
+
+.md-typeset a.headerlink {
+  color: #d990b9;
 }
 
 
@@ -82,7 +87,7 @@
 /* Хедер */
 [data-md-color-scheme="slate"] .md-header {
   background: rgba(22,24,29,.85);
-  backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px); Не трогать, ломает поиск на мобиле */
   box-shadow: none;
 }
 
@@ -124,7 +129,7 @@
 /* Хедер */
 [data-md-color-scheme="default"] .md-header {
   background: rgba(189, 121, 158,.85);
-  backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px); Не трогать, ломает поиск на мобиле*/ 
   box-shadow: none;
 }
 
