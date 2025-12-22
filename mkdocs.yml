@@ -28,6 +28,7 @@ plugins:
   - search
 
 markdown_extensions:
+  - tables
   - admonition
   - attr_list
   - pymdownx.highlight
