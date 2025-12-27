@@ -35,3 +35,7 @@
     print(cat_object.name)              # Доступ к атрибуту
     print(cat_object.meow())            # Вызов метода
 ```
+
+## Полезные источники
+
+[Принципы ООП в примерах - Хабр](https://habr.com/ru/companies/otus/articles/764266/){.link-accent}
