@@ -58,7 +58,7 @@
 Ленивые вычисления и работа с последовательностями.
 
 - [yield](yield.md) — генераторы, ленивая генерация
-- [Generator expression](generator_expression.md) — синтаксис `(x for x in ...)`
+- [Generator expression](generator.md) — синтаксис `(x for x in ...)`
 - [Starred expression](starred_expression.md) — распаковка `*args`
 
 ---
