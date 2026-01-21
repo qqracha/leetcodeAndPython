@@ -76,29 +76,32 @@ print(f'Изначальный:\n{arr}\n')
 
 # print(f'Отсортированный, при помощи Merge Sort:\n{merge_sort(arr)}\n')
 
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
+def merge_sort(nums):
+    if len(nums) <= 1:
+        return nums
     
-    mid = len(arr) // 2
-    left_half = merge_sort(arr[:mid])
-    right_half = merge_sort(arr[mid:])
+    middle = len(nums) // 2
+    left_half = merge_sort(nums[:middle])
+    right_half = merge_sort(nums[middle:])
 
     return merge(left_half, right_half)
 
 def merge(left, right):
     result = []
     i = j = 0
+
     while i < len(left) and j < len(right):
         if left[i] <= right[j]:
             result.append(left[i])
-            i += 1
-        else: 
+            i+=1
+        else:
             result.append(right[j])
-            j += 1
-
+            j+=1
+        
     result.extend(left[i:])
     result.extend(right[j:])
     return result
 
-print(f'Отсортированный, при помощи Merge Sort:\n{merge_sort(arr)}\n')
+nums = [8,2,4,5,12]
+
+print(merge_sort(nums))
