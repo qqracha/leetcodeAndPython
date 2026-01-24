@@ -1,6 +1,6 @@
 # Lomuto partition (in-place)
 
-from typing import List
+from typing import List # Типизация
 
 def partition_lomuto(a: List[int], lo: int, hi: int) -> int:
     pivot = a[hi]                 # pivot лежит в конце
