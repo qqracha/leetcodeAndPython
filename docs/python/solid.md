@@ -164,3 +164,7 @@
             self._database.save_data(user)
             pass
 ```
+
+## Источники
+
+Подробнее на: https://speedrunit.ru/question/9/?
