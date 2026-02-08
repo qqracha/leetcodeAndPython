@@ -167,4 +167,4 @@
 
 ## Источники
 
-Подробнее на: https://speedrunit.ru/question/9/?
+Подробнее на: [Одноглазый змей - SOLID](https://speedrunit.ru/question/9/?)
