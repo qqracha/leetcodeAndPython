@@ -1,0 +1,153 @@
+/* ============ Общие стили для всех тем ============ */
+
+/* Размер текста по умолчанию */
+[data-md-color-scheme] {
+  font-size: 15px;
+}
+
+/* Active state при наведении */
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: #d990b9 ;
+}
+
+/* Ссылки в тексте */
+.md-typeset a {
+  color: #d990b9;
+}
+
+.md-typeset a:hover {
+  color: #e6a6c9;
+  text-decoration: underline;
+  text-decoration-color: #e6a6c9;
+}
+
+/* Ссылки в тексте типа code*/
+.md-typeset a code {
+  color: inherit;
+}
+
+.md-typeset a code:hover{
+  background-color: transparent;
+}
+
+
+/* Общая форма admonition */
+.md-typeset .admonition {
+  border-radius: 12px;
+  border: 0px solid;
+  overflow: hidden;
+}
+
+/* Scrollbar в сайдбаре */
+.md-sidebar__scrollwrap {
+  scrollbar-color: #bd799e transparent; /* Firefox */
+}
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+  background-color: #bd799e;
+  border-radius: 3px;
+}
+
+/* Badge (span.badge) */
+.md-typeset .badge {
+  background: rgba(110, 118, 129, 0.22);
+  border-radius: 4px;
+  color: #D990B9;
+  padding: 0.12em 0.5em;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+/* Footer */
+.md-copyright {
+  display: none; 
+}
+
+.md-typeset a.headerlink {
+  color: #d990b9;
+}
+
+
+/* ============ Dark theme (slate) ============ */
+
+[data-md-color-scheme="slate"] {
+  /* Общие цвета */
+  --md-default-bg-color: #1E2129;
+  --md-default-fg-color: rgba(255,255,255,.88);
+  --md-default-fg-color--light: rgba(255,255,255,.68);
+  
+  /* Primary/Accent (для ссылок, активных состояний, мелких акцентов) */
+  --md-primary-fg-color: #bd799e;
+  --md-accent-fg-color: #d990b9;
+  
+  /* Код */
+  --md-code-bg-color: transparent;
+}
+
+/* Хедер */
+[data-md-color-scheme="slate"] .md-header {
+  background: rgba(22,24,29,.85);
+  /* backdrop-filter: blur(12px); Не трогать, ломает поиск на мобиле */
+  box-shadow: none;
+}
+
+/* ----------- Admonition (slate) -----------*/
+
+/* INFO / NOTE (синяя) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset .admonition.note {
+  background-color: rgba(56, 139, 253, 0.12);
+  box-shadow: none;
+}
+
+/* WARNING (жёлтая) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning {
+  background-color: rgba(210, 153, 34, 0.12);
+}
+
+/* DANGER / ERROR (красная) */
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger {
+  background-color: rgba(248, 81, 73, 0.12);
+}
+
+
+/* ============ White theme (default) ============ */
+
+[data-md-color-scheme="default"] {
+  /* Общие цвета */
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: rgba(0, 0, 0, 0.88);
+  --md-default-fg-color--light: rgba(0, 0, 0, 0.68);
+  
+  /* Primary/Accent (для ссылок, активных состояний, мелких акцентов) */
+  --md-primary-fg-color: #bd799e;
+  --md-accent-fg-color: #d990b9;
+
+  --md-code-bg-color: transparent;
+}
+
+/* Хедер */
+[data-md-color-scheme="default"] .md-header {
+  background: rgba(189, 121, 158,.85);
+  /* backdrop-filter: blur(12px); Не трогать, ломает поиск на мобиле*/ 
+  box-shadow: none;
+}
+
+/* ----------- Admonition (default) -----------*/
+
+/* INFO / NOTE (синяя) */
+[data-md-color-scheme="default"] .md-typeset .admonition.info,
+[data-md-color-scheme="default"] .md-typeset .admonition.note {
+  background-color: rgba(11, 94, 219, 0.08);
+  box-shadow: none;
+}
+
+/* WARNING (жёлтая) */
+[data-md-color-scheme="default"] .md-typeset .admonition.warning {
+  background-color: rgba(255, 193, 7, 0.15);
+}
+
+/* DANGER / ERROR (красная) */
+[data-md-color-scheme="default"] .md-typeset .admonition.danger {
+  background-color: rgba(220, 53, 69, 0.1);
+}
